@@ -1,29 +1,36 @@
-const Decrement: React. FC<DecrementProps> = (( value, setValue }) =>{
+import React from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 
-
-type IncrementProps = { value: number; setValue: (value: number) => void };
-                       
-const handleDecrement: = () =>{
+type DecrementProps = {
+  value: number;
+  setValue: (value: number) => void;
 };
-  return(
+
+const Decrement: React.FC<DecrementProps> = ({ value, setValue }) => {
+  const handleDecrement = () => {
+    setValue(value - 1);
+  };
+
+  return (
     <View style={styles.container}>
-      <TouchalbeOpacity onPress={() => console.log("Decrement")}>
-        <Text style-{styles.text}>Decrement </Text>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={handleDecrement}>
+        <Text style={styles.text}>Decrement</Text>
+      </TouchableOpacity>
     </View>
   );
 };
 
 export default Decrement;
+
 const styles = StyleSheet.create({
   container: {
-    flex: 1, 
-        justifyContent: "center"
-        alignItems: "center"
-        BackgroundColor:"#fff",
-        },
-        text: {
-          fontSize: 20,
-          color: :black",
-        }
-        });
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#fff",
+  },
+  text: {
+    fontSize: 20,
+    color: "black",
+  },
+});

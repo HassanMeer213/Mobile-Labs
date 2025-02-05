@@ -1,6 +1,9 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
-  }
+    "strict": true,
+    "allowJs": true,      // ✅ Allows JavaScript files
+    "checkJs": false      // ❌ (Optional) Disable type-checking for .js files
+  },
+  "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"] // ✅ Ensures JS files are included
 }
