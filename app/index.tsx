@@ -1,9 +1,11 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity, Button } from "react-native";
 import { fruits } from "../components/FruitList";
 import Button_Template from "../components/button_template";
+import { useRouter } from "expo-router";
 
 export default function App() {
+  const router = useRouter();
   return (
     <View style={styles.container}>
       <View>
@@ -18,6 +20,7 @@ export default function App() {
       </View>
 
       <StatusBar style="auto" />
+      <Button title="lab3 " onPress={()=>{router.push("/lab_3")}} />
     </View>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { Text, TouchableOpacity, View, StyleSheet } from "react-native";
 
 type DecrementProps = {
   value: number;
@@ -13,8 +13,8 @@ const Decrement: React.FC<DecrementProps> = ({ value, setValue }) => {
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={handleDecrement}>
-        <Text style={styles.text}>Decrement</Text>
+      <TouchableOpacity style={styles.button} onPress={handleDecrement}>
+        <Text style={styles.buttonText}>Decrement</Text>
       </TouchableOpacity>
     </View>
   );
@@ -24,13 +24,16 @@ export default Decrement;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#fff",
+    marginVertical: 10,
   },
-  text: {
-    fontSize: 20,
-    color: "black",
+  button: {
+    backgroundColor: "#2196F3",
+    padding: 10,
+    borderRadius: 8,
+  },
+  buttonText: {
+    color: "#fff",
+    fontSize: 16,
   },
 });
