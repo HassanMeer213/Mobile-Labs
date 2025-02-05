@@ -1,4 +1,4 @@
-import React from "react-native";
+import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 
 type DecrementProps = {
