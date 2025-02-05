@@ -14,3 +14,15 @@ const Decrement: = () =>{
 };
 
 export default Decrement;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1, 
+        justifyContent: "center"
+        alignItems: "center"
+        BackgroundColor:"#fff",
+        },
+        text: {
+          fontSize: 20,
+          color: :black",
+        }
+        });
