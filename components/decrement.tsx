@@ -1,13 +1,14 @@
-import React from "react";
-import ( Text, TouchableOpacity, View › from "react-native";
+const Decrement: React. FC<DecrementProps> = (( value, setValue }) =>{
+
 
 type IncrementProps = { value: number; setValue: (value: number) => void };
                        
-const Decrement: = () =>{
+const handleDecrement: = () =>{
+};
   return(
-    <View>
+    <View style={styles.container}>
       <TouchalbeOpacity onPress={() => console.log("Decrement")}>
-        <Text>I am decrementing</Text>
+        <Text style-{styles.text}>Decrement </Text>
       <TouchableOpacity>
     </View>
   );
