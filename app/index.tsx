@@ -20,7 +20,18 @@ export default function App() {
       </View>
 
       <StatusBar style="auto" />
-      <Button title="lab3 " onPress={()=>{router.push("/lab_3")}} />
+      <Button
+        title="lab3 "
+        onPress={() => {
+          router.push("/lab_3");
+        }}
+      />
+      <Button
+        title="lab4"
+        onPress={() => {
+          router.push("/lab4");
+        }}
+      />
     </View>
   );
 }
@@ -42,5 +53,8 @@ const styles = StyleSheet.create({
   fruitContainer: {
     marginTop: 20,
     alignItems: "center",
+  },
+  buttonContainer: {
+    gap: 10,
   },
 });
