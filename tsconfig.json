@@ -2,8 +2,12 @@
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
     "strict": true,
-    "allowJs": true,      // ✅ Allows JavaScript files
-    "checkJs": false      // ❌ (Optional) Disable type-checking for .js files
+    "allowJs": true, // ✅ Allows JavaScript files
+    "checkJs": false, // ❌ Disable type-checking for .js files
+    "jsx": "react-native", // ✅ Enables JSX for React Native
+    "moduleResolution": "node", // ✅ Ensures correct module resolution
+    "esModuleInterop": true, // ✅ Ensures compatibility with ES modules
+    "skipLibCheck": true // ✅ Skips type-checking for node_modules
   },
-  "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"] // ✅ Ensures JS files are included
+  "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"]
 }

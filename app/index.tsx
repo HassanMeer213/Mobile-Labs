@@ -13,18 +13,13 @@ export default function App() {
         <Text style={styles.title}>Welcome to my application</Text>
         <Button_Template />
       </View>
-
       <View style={styles.fruitContainer}>
         <Text style={[styles.text, { color: "red" }]}>{fruits[0]}</Text>
         <Text style={[styles.text, { color: "orange" }]}>{fruits[1]}</Text>
         <Text style={[styles.text, { color: "green" }]}>{fruits[2]}</Text>
       </View>
-
       <StatusBar style="auto" />
-
-      {/* Navigation Buttons */}
-      <Button title="Go to Lab 3" onPress={() => router.push("/lab_3")} />
-      <Button title="Go to Lab 5" onPress={() => router.push("/lab_5")} />
+      <Button title="lab3 " onPress={()=>{router.push("/lab_3")}} />
     </View>
   );
 }
@@ -46,5 +41,9 @@ const styles = StyleSheet.create({
   fruitContainer: {
     marginTop: 20,
     alignItems: "center",
+  },
+  buttonContainer: {
+    marginTop: 20,
+    gap: 10,
   },
 });
